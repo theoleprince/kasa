@@ -6,6 +6,8 @@ import Error from './composants/Error/Error'
 import Header from './composants/Header/Header'
 import Results from './pages/Results/Results'
 import Freelances from './pages/Freelances/Freelances'
+import Footer from './composants/Footer/Footer'
+import Logement from './pages/Logement/Logement'
 
 function App() {
   return (
@@ -13,11 +15,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/survey/:questionNumber" element={<Survey />} />
-        <Route path="/resultat" element={<Results />} />
-        <Route path="/freelances" element={<Freelances />} />
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

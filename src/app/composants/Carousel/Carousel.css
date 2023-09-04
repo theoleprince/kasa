@@ -1,0 +1,42 @@
+
+.carousel-item img {
+    height: 500px; /* Définissez la hauteur souhaitée ici */
+    object-fit: cover; /* Utilisez object-fit pour redimensionner l'image tout en conservant son aspect */
+  }
+
+
+.carousel-indicators{
+    z-index: 0 !important;
+    display: none !important;
+}
+
+.carousel-indicators:hover{
+    z-index: 0 !important;
+    display: none !important;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 0px !important;
+    left: 15%;
+    z-index: 10;
+    margin-top: 20px !important;
+    padding-top: 20px;
+    padding-bottom: 0px !important;
+    color: #fff;
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.visually-hidden {
+    display: none !important;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 100px !important;
+    height: 200px !important;
+    background: 50%/100% 100% no-repeat;
+    color: #fff
+}

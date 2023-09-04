@@ -16,8 +16,8 @@ class DataService {
     try {
       const response = await fetch('/logements.json')
       const data = await response.json()
-      if (data) {
-        return data.filter((item) => item.id === id)
+      if (data && data.data) {
+        return data.data.find((item) => item.id === id)
       }
       return null
     } catch (error) {

@@ -4,7 +4,7 @@ import logo from './../../../assets/logo.png'
 
 function Header() {
   return (
-    <header className="container">
+    <header className="container-fluid">
       <div className="d-flex align-items-center mt-4">
         <img src={logo} alt="Logo KASA" />
         <nav className="ms-auto">

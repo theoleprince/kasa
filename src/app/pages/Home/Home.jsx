@@ -21,9 +21,9 @@ function Home() {
   }
 
     return (
-      <div className="container mt-5">
+      <div className="container-fluid mt-5">
         <Banner />
-        <Gallery logement={data} />
+        <Gallery logementList={data.data} />
       </div>
     )
   }
