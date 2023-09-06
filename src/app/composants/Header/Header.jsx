@@ -10,12 +10,12 @@ function Header() {
         <nav className="ms-auto">
           <ul className="nav">
             <li className="nav-item ">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link lin">
                 Accueil
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
+              <Link to="/about" className="nav-link lin">
                 A Propos
               </Link>
             </li>

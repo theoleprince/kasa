@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react";
 import DataService from "../../../_services/Data-service";
 import CarouselLogement from '../../composants/Carousel/Carousel';
+import AccordionDetail from '../../composants/DetailLogement/DetailLogement';
 
 function Logement() {
     const { id } = useParams()
@@ -24,6 +25,7 @@ function Logement() {
     return (
         <div className="container-fluid mt-5">
         <CarouselLogement logement={data} />
+        <AccordionDetail logement={data} />
         {/* <Gallery logementList={data.data} /> */}
       </div>
     )
