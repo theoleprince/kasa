@@ -39,29 +39,38 @@ function DetailAbout() {
   
     return (
       <div className="mt-5 row">
-        <Accordion className="col-md-12" defaultActiveKey={[]} alwaysOpen>
-          {abouts.map((item) => (
-            <Accordion.Item key={item.id} eventKey={item.id}>
-              <Accordion.Header onClick={() => toggleAccordion(item.id)}>
-                <div className="bg-color-equipement">
-                  <div>{item.nom}</div>
-                  <div>
-                    {openedAccordions.includes(item.id) ? (
-                      <FontAwesomeIcon icon={faAngleUp} />
-                    ) : (
-                      <FontAwesomeIcon icon={faAngleDown} />
-                    )}
-                  </div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body className="body-item" style={{ display: openedAccordions.includes(item.id) ? "block" : "none" }}>
-                {item.description}
-              </Accordion.Body>
-            </Accordion.Item>
-          ))}
-        </Accordion>
+        {abouts.map((item) => (
+          <div className="col-md-12" key={item.id}>
+            <div
+              className="bg-color-equipement accordion-button d-flex justify-content-between align-items-center"
+              data-bs-toggle="collapse"
+              href={`#aboutCollapse${item.id}`}
+              role="button"
+              aria-expanded="false"
+              aria-controls={`aboutCollapse${item.id}`}
+              onClick={() => toggleAccordion(item.id)}
+            >
+              <div>{item.nom}</div>
+              <div>
+                {openedAccordions.includes(item.id) ? (
+                  <FontAwesomeIcon icon={faAngleUp} />
+                ) : (
+                  <FontAwesomeIcon icon={faAngleDown} />
+                )}
+              </div>
+            </div>
+            {openedAccordions.includes(item.id) ? (
+              <div className="collapse show" id={`aboutCollapse${item.id}`}>
+                <div className="body-item1">{item.description}</div>
+              </div>
+            ) : (
+              ''
+            )}
+          </div>
+        ))}
       </div>
-    );
+    )
+  ;
   }
   
   export default DetailAbout;
